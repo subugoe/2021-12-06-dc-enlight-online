@@ -421,7 +421,7 @@ to include the relevant installation instrucctions.
 {% endif %}
 
 
-<h2 id="setup"Tools</h2>
+<h3 id="setup"Tools</h3>
 These are the installation instructions for the tools used
 during the workshop.
 
