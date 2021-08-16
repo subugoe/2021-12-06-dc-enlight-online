@@ -420,6 +420,8 @@ to include the relevant installation instrucctions.
 {% include install_instructions/videoconferencing.html %}
 {% endif %}
 
+
+<h2 id="setup"Tools</h2>
 These are the installation instructions for the tools used
 during the workshop.
 
