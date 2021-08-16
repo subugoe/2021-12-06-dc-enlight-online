@@ -423,7 +423,6 @@ to include the relevant installation instrucctions.
 {% comment %}
 These are the installation instructions for the tools used
 during the workshop.
-{% endcomment %}
 
 {% if site.carpentry == "swc" %}
 {% include swc/setup.html %}
@@ -435,4 +434,186 @@ during the workshop.
 Please check the "Setup" page of
 [the lesson site]({{ site.lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
+{% endcomment %}
+
+<div id="openrefine">
+  <h3>OpenRefine</h3>
+  <p>
+    For this lesson you will need <em>OpenRefine</em> and a
+    web browser. <em>Note:</em> this is a Java program that runs on your machine (not in the cloud).
+    It runs inside a web browser, but no web connection is needed.
+  </p>
+
+  <div>
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a data-os="windows" href="#openrefine-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
+      <li role="presentation"><a data-os="macos" href="#openrefine-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
+      <li role="presentation"><a data-os="linux" href="#openrefine-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <article role="tabpanel" class="tab-pane active" id="openrefine-windows">
+        <ol>
+          <li>
+            Check that you have either the Firefox or the Chrome browser installed and set as your default browser.
+            <strong>OpenRefine runs in your default browser.</strong>
+            It will not run correctly in Internet Explorer.
+          </li>
+          <li>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a></li>
+          <li>Create a new directory called OpenRefine.</li>
+          <li>Unzip the downloaded file into the OpenRefine directory by right-clicking and selecting "Extract ...". </li>
+          <li>Go to your newly created OpenRefine directory.</li>
+          <li>Launch OpenRefine by clicking <code>openrefine.exe</code> (this will launch a command prompt window, but you can ignore that - just wait for OpenRefine to open in the browser).</li>
+          <li>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</li>
+        </ol>
+      </article>
+      <article role="tabpanel" class="tab-pane" id="openrefine-macos">
+        <ol>
+          <li>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong> It may not run correctly in Safari.</li>
+          <li>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</li>
+          <li>Create a new directory called OpenRefine.</li>
+          <li>Unzip the downloaded file into the OpenRefine directory by double-clicking it.</li>
+          <li>Go to your newly created OpenRefine directory.</li>
+          <li>Launch OpenRefine by dragging the icon into the Applications folder.</li>
+          <li>Use <kbd>Ctrl</kbd>-click/Open ... to launch it.</li>
+          <li>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</li>
+        </ol>
+      </article>
+      <article role="tabpanel" class="tab-pane" id="openrefine-linux">
+        <ol>
+          <li>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong></li>
+          <li>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</li>
+          <li>Make a directory called OpenRefine.</li>
+          <li>Unzip the downloaded file into the OpenRefine directory.</li>
+          <li>Go to your newly created OpenRefine directory.</li>
+          <li>Launch OpenRefine by entering <code>./refine</code> into the terminal within the OpenRefine directory.</li>
+          <li>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</li>
+        </ol>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div id="sql">
+  <h3>SQLite</h3>
+
+  <p>
+    SQL is a specialized programming language used with databases.  We
+    use a database manager called
+    <a href="https://www.sqlite.org/">SQLite</a> in our lessons.
+  </p>
+
+  <div>
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a data-os="windows" href="#sql-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
+      <li role="presentation"><a data-os="macos" href="#sql-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
+      <li role="presentation"><a data-os="linux" href="#sql-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
+      <li role="presentation"><a data-os="web" href="#sql-web" aria-controls="Web" role="tab" data-toggle="tab">Web</a></li>
+    </ul>
+    <div class="tab-content">
+      <article role="tabpanel" class="tab-pane active" id="sql-windows">
+        <ul>
+          <li>Run "Git Bash" from the Start menu</li>
+          <li>Copy the following <code>curl -fsSL  {{site.url}}{{site.baseurl}}/getsql.sh | bash</code></li>
+          <li>Paste it into the window that Git Bash opened. If you're unsure, ask an instructor for help</li>
+          <li>You should see something like <code>3.27.2 2019-02-25 16:06:06 ...</code></li>
+        </ul>
+
+          <p>If you want to do this manually, download <a href="https://www.sqlite.org/2019/sqlite-tools-win32-x86-3270200.zip">sqlite3</a>, make a bin directory in the user's home directory, unzip sqlite3, move it into the bin directory, and then add the bin directory to the path.</p>
+
+      </article>
+      <article role="tabpanel" class="tab-pane" id="sql-macos">
+        <p>
+          SQLite comes pre-installed on macOS.
+        </p>
+      </article>
+      <article role="tabpanel" class="tab-pane" id="sql-linux">
+        <p>
+          SQLite comes pre-installed on Linux.
+        </p>
+      </article>
+      <article role="tabpanel" class="tab-pane" id="sql-web">
+        <ul>
+          <li>In case of problems: register for an account at <a href="https://www.pythonanywhere.com/">https://www.pythonanywhere.com</a></li>
+          <li>Download <a href="http://swcarpentry.github.io/sql-novice-survey/files/survey.db">survey.db</a></li>
+          <li>Click on files and upload survey.db</li>
+          <li>Click on dashboard and Choose new console <code>bash</code></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <p><strong>If you installed Anaconda, it also has a copy of SQLite
+      <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
+      Instructors will provide a workaround for it if needed.</strong></p>
+</div>
+
+<div id="r">
+  <h3>R</h3>
+
+  <p>
+    <a href="https://www.r-project.org">R</a> is a programming language
+    that is especially powerful for data exploration, visualization, and
+    statistical analysis. To interact with R, we use
+    <a href="https://www.rstudio.com/">RStudio</a>.
+  </p>
+
+  <div>
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a data-os="windows" href="#rstats-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
+      <li role="presentation"><a data-os="macos" href="#rstats-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
+      <li role="presentation"><a data-os="linux" href="#rstats-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <article role="tabpanel" class="tab-pane active" id="rstats-windows">
+        <p>
+          Install R by downloading and running
+          <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
+          from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+          Also, please install the
+          <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+          Note that if you have separate user and admin accounts, you should run the
+          installers as administrator (right-click on .exe file and select "Run as
+          administrator" instead of double-clicking). Otherwise problems may occur later,
+          for example when installing R packages.
+        </p>
+        <h4>Video Tutorial</h4>
+        <div class="yt-wrapper2">
+        <div class="yt-wrapper">
+        <iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/q0PjTAylwoU?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0" class="yt-frame" allowfullscreen></iframe>
+        </div>
+        </div>
+      </article>
+      <article role="tabpanel" class="tab-pane" id="rstats-macos">
+        <p>
+          Install R by downloading and running
+          <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
+          from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+          Also, please install the
+          <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+        </p>
+        <h4>Video Tutorial</h4>
+        <div class="yt-wrapper2">
+        <div class="yt-wrapper">
+        <iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/5-ly3kyxwEg?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0" class="yt-frame" allowfullscreen></iframe>
+        </div>
+        </div>
+      </article>
+      <article role="tabpanel" class="tab-pane" id="rstats-linux">
+        <p>
+          Instructions for R installation on various Linux platforms (debian,
+          fedora, redhat, and ubuntu) can be found at
+          <https://cran.r-project.org/bin/linux/>. These will instruct you to
+          use your package manager (e.g. for Fedora run
+          <code>sudo dnf install R</code> and for Debian/Ubuntu, add a ppa
+          repository and then run <code>sudo apt-get install r-base</code>).
+          Also, please install the
+          <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+        </p>
+      </article>
+    </div>
+  </div>
+</div>
+
 {% endif %}
