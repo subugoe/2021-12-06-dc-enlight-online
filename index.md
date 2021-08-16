@@ -420,10 +420,10 @@ to include the relevant installation instrucctions.
 {% include install_instructions/videoconferencing.html %}
 {% endif %}
 
-{% comment %}
 These are the installation instructions for the tools used
 during the workshop.
 
+{% comment %}
 {% if site.carpentry == "swc" %}
 {% include swc/setup.html %}
 {% elsif site.carpentry == "dc" %}
@@ -434,8 +434,8 @@ during the workshop.
 Please check the "Setup" page of
 [the lesson site]({{ site.lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
+{% endif %}
 {% endcomment %}
-
 <div id="openrefine">
   <h3>OpenRefine</h3>
   <p>
@@ -615,5 +615,3 @@ to obtain the software and data you will need to follow the lesson.
     </div>
   </div>
 </div>
-
-{% endif %}
