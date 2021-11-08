@@ -9,7 +9,7 @@ country: "Germany"      # lowercase two-letter ISO country code such as "fr" (se
 language: "english"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "Oct 11-15, 2021"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "Dec 06-10, 2021"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: ""    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2021-12-06      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2021-12-10        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
