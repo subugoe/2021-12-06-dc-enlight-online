@@ -500,8 +500,8 @@ to obtain the software and data you will need to follow the lesson.
   <h3>SQLite</h3>
 
   <p>
-    Download DB Browser for SQLite for your operating system from .
-    <a href="https://sqlitebrowser.org/dl//">Downloads</a>
+    Download DB Browser for SQLite for your operating system from
+    <a href="https://sqlitebrowser.org/dl//">this page</a>.
   </p>
 
 <div id="r">
